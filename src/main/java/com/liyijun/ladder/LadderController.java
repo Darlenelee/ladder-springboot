@@ -79,7 +79,7 @@ public class LadderController {
         FileReader infile1 = null;
         try{
             // create a file object with filename
-            path="/Users/darlenelee/Documents/sjtu17/SE417/ladder-springboot/src/main/resources/static/"+path;
+            path="src/main/resources/static/"+path;
             infile1 = new FileReader(path);
         }catch(FileNotFoundException ex){ return (path); }
         String line = "";
