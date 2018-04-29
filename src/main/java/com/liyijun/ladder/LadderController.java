@@ -1,6 +1,7 @@
 package com.liyijun.ladder;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,7 +27,6 @@ public class LadderController {
         String str_new = new String(chars);
         return str_new;
     }
-
 
     public static Stack<String> findLadder(HashSet dic, String begin, String end, int len){
         // words already appeared in stacks
@@ -68,7 +68,19 @@ public class LadderController {
         return s1;
     }
 
+    @RequestMapping("/")
+    public String index() {
+        return "Please login";
+    }
+    @RequestMapping("/hello")
+    public String hello() {
+        return "hello";
+    }
 
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login() {
+        return "login";
+    }
     @RequestMapping(value = "/wl")
     @ResponseBody
     public String main(String path, String begin_input, String end_input) throws IOException {
