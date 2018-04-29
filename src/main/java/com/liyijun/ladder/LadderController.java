@@ -68,19 +68,7 @@ public class LadderController {
         return s1;
     }
 
-    @RequestMapping("/")
-    public String index() {
-        return "Please login";
-    }
-    @RequestMapping("/hello")
-    public String hello() {
-        return "hello";
-    }
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login() {
-        return "login";
-    }
     @RequestMapping(value = "/wl")
     @ResponseBody
     public String main(String path, String begin_input, String end_input) throws IOException {
